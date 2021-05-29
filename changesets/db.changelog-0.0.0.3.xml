@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+
+    <changeSet author="pabloruiz" id="procedure-1.01">
+        <createProcedure>
+        <!--La sintaxis depende del gestor se utilice-->
+            CREATE PROCEDURE insertar_dato(a integer,b varchar(30),c integer)
+            LANGUAGE SQL
+            AS $$
+            INSERT INTO PUESTO VALUES (a,b,c);
+            $$;
+        </createProcedure>
+    </changeSet>
+</databaseChangeLog> 
